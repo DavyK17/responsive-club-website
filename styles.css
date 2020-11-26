@@ -95,7 +95,53 @@ header {
     font-size: 1.4rem;
     color: black;
     text-shadow: 5px 5px 15px black;
-    margin-bottom: 1rem;
+}
+
+
+/* Navigation */
+
+nav,
+nav a {
+    color: black;
+    font-family: "Texturina", serif;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+nav a:focus {
+    color: firebrick;
+}
+
+nav ul {
+    display: flex;
+    margin: 1rem auto;
+    padding: 0;
+    justify-content: center;
+}
+
+nav li {
+    display: inline-flex;
+    flex-basis: 225px;
+    justify-content: center;
+}
+
+.nav-icon {
+    display: none;
+    width: 75px;
+    height: auto;
+}
+
+#top-button {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 100;
+}
+
+#top-button img {
+    width: 50px;
+    height: auto;
 }
 
 
@@ -288,4 +334,61 @@ footer>p {
     margin: 0;
     font-size: 0.75rem;
     text-align: right;
+}
+
+
+/* Media queries */
+
+@media only screen and (max-width: 1221px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .schedule-box {
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    body {
+        grid-template: repeat(6, auto) / repeat(5, 1fr);
+    }
+    nav li {
+        flex-basis: 25%;
+    }
+    .nav-text {
+        display: none;
+    }
+    .nav-icon {
+        display: block;
+    }
+    main {
+        grid-area: 2 / 1 / span 1 / span 5;
+    }
+    #schedule {
+        grid-area: 3 / 1 / span 1 / span 5;
+    }
+    #testimonials {
+        grid-area: 4 / 1 / span 1 / span 5;
+    }
+    #contact {
+        grid-area: 5 / 1 / span 1 / span 5;
+    }
+    #top-button {
+        background-color: rgba(0, 0, 0, 0.75);
+        padding: 0.5rem;
+        border-radius: 100%;
+    }
+    #contact form .form-input:first-of-type {
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+    #contact form .form-input:nth-of-type(2) {
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+    #contact form .form-input:nth-of-type(3) {
+        grid-area: 3 / 1 / span 1 / span 2;
+    }
+    #contact form .form-input:last-of-type {
+        grid-area: 4 / 1 / span 1 / span 2;
+    }
 }
