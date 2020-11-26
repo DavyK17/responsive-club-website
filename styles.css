@@ -69,6 +69,7 @@ a:focus {
 .box-container {
     display: flex;
     justify-content: space-evenly;
+    margin: 1rem;
 }
 
 
@@ -140,7 +141,7 @@ main {
 #schedule {
     background: rgba(0, 0, 0, 0.9);
     grid-area: 3 / 2 / span 1 / span 5;
-    padding: 1rem;
+    padding: 0 1rem;
     border-top: 1px solid black;
 }
 
