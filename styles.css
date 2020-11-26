@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+
+/* GENERAL */
+
+html {
+    font-size: 16px !important;
+}
+
+body {
+    display: grid;
+    width: 100%;
+    background-color: aliceblue;
+    grid-template-areas: "header header" "main main" "schedule schedule" "footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+#wordmark {
+    font-family: "Faster One", cursive;
+}
+
+main {
+    grid-area: main;
+}
+
+#schedule {
+    grid-area: schedule;
+}
+
+footer {
+    grid-area: footer;
+}
