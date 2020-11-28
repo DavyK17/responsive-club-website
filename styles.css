@@ -128,7 +128,7 @@ nav li {
 
 .nav-icon {
     display: none;
-    width: 75px;
+    width: 2rem;
     height: auto;
 }
 
@@ -276,7 +276,7 @@ main {
 #contact form {
     display: grid;
     margin: 2rem 0;
-    grid-template: repeat(4, auto) / repeat(2, 1fr);
+    grid-template: repeat(5, auto) / repeat(2, 1fr);
     grid-column-gap: 10%;
 }
 
@@ -317,6 +317,26 @@ main {
     grid-area: 3 / 1 / span 1 / span 2;
 }
 
+#contact form button {
+    grid-area: 4 / 1 / span 1 / span 1;
+    height: 50px;
+    width: 125px;
+    background-color: whitesmoke;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+#contact form button:hover,
+#contact form button:focus {
+    background-color: #ceff00;
+    transition: background-color 0.15s ease-in-out;
+}
+
 
 /* Footer */
 
@@ -333,7 +353,6 @@ footer {
 footer>p {
     margin: 0;
     font-size: 0.75rem;
-    text-align: right;
 }
 
 
@@ -350,8 +369,14 @@ footer>p {
 }
 
 @media only screen and (max-width: 980px) {
+    html {
+        font-size: 16px !important;
+    }
     body {
         grid-template: repeat(6, auto) / repeat(5, 1fr);
+    }
+    #top-banner {
+        padding: 0 1rem;
     }
     nav li {
         flex-basis: 25%;
@@ -390,5 +415,17 @@ footer>p {
     }
     #contact form .form-input:last-of-type {
         grid-area: 4 / 1 / span 1 / span 2;
+    }
+    #contact form button {
+        grid-area: 5 / 1 / span 1 / span 2;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer>p {
+        font-size: 1rem;
+    }
+    footer>p:last-of-type {
+        margin-top: 0.5rem;
     }
 }
