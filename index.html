@@ -102,7 +102,7 @@
     <section id="contact">
         <h1>Contact us</h1>
         <p>Get in touch with us today to find out how you can join!</p>
-        <form autocomplete="off">
+        <form id="contact-form" autocomplete="off">
             <div class="form-input">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Full name*" required>
@@ -127,9 +127,10 @@
         <p>Demo website designed by <a href="https://upwork.com/fl/davykamanzi" target="_blank">Davy Kamanzi</a>.</p>
     </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script type="text/javascript">
-    $("form").submit(false);
+    document.getElementById("contact-form").addEventListener("submit", event => {
+        event.preventDefault();
+    })
 </script>
 
 </html>
